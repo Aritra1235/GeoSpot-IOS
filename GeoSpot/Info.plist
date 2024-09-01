@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Existing entry for URL types -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict/>
+    </array>
+
+    <!-- New entries for location permissions -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location to show your current coordinates.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need your location to show your current coordinates even when the app is in the background.</string>
+</dict>
+</plist>

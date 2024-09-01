@@ -14,6 +14,7 @@
 		9A8CC26C2C848B200038B85F /* GeoSpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC26B2C848B200038B85F /* GeoSpotTests.swift */; };
 		9A8CC2762C848B200038B85F /* GeoSpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC2752C848B200038B85F /* GeoSpotUITests.swift */; };
 		9A8CC2782C848B200038B85F /* GeoSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC2772C848B200038B85F /* GeoSpotUITestsLaunchTests.swift */; };
+		9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9AC612C849A2C00B0522D /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		9A8CC2712C848B200038B85F /* GeoSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoSpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8CC2752C848B200038B85F /* GeoSpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoSpotUITests.swift; sourceTree = "<group>"; };
 		9A8CC2772C848B200038B85F /* GeoSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9AB9AC602C84997100B0522D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9AB9AC612C849A2C00B0522D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,12 @@
 		9A8CC2592C848B190038B85F /* GeoSpot */ = {
 			isa = PBXGroup;
 			children = (
+				9AB9AC602C84997100B0522D /* Info.plist */,
 				9A8CC25A2C848B190038B85F /* GeoSpotApp.swift */,
 				9A8CC25C2C848B190038B85F /* ContentView.swift */,
 				9A8CC25E2C848B1F0038B85F /* Assets.xcassets */,
 				9A8CC2602C848B1F0038B85F /* Preview Content */,
+				9AB9AC612C849A2C00B0522D /* LocationManager.swift */,
 			);
 			path = GeoSpot;
 			sourceTree = "<group>";
@@ -190,6 +195,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
@@ -259,6 +267,7 @@
 			files = (
 				9A8CC25D2C848B190038B85F /* ContentView.swift in Sources */,
 				9A8CC25B2C848B190038B85F /* GeoSpotApp.swift in Sources */,
+				9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +429,7 @@
 				DEVELOPMENT_TEAM = 67V2X7656M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeoSpot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +459,7 @@
 				DEVELOPMENT_TEAM = 67V2X7656M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GeoSpot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
