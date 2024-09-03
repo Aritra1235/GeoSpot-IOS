@@ -17,6 +17,7 @@
 		9A8CC2762C848B200038B85F /* GeoSpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC2752C848B200038B85F /* GeoSpotUITests.swift */; };
 		9A8CC2782C848B200038B85F /* GeoSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC2772C848B200038B85F /* GeoSpotUITestsLaunchTests.swift */; };
 		9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9AC612C849A2C00B0522D /* LocationManager.swift */; };
+		9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393B92C87C77900E9B996 /* LocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9A8CC2772C848B200038B85F /* GeoSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9AB9AC602C84997100B0522D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9AB9AC612C849A2C00B0522D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9AE393B92C87C77900E9B996 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9A8CC2602C848B1F0038B85F /* Preview Content */,
 				9AB9AC612C849A2C00B0522D /* LocationManager.swift */,
 				9A1D015B2C87B691008E5F1F /* LoginView.swift */,
+				9AE393B92C87C77900E9B996 /* LocationView.swift */,
 			);
 			path = GeoSpot;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				9A8CC25D2C848B190038B85F /* ContentView.swift in Sources */,
 				9A8CC25B2C848B190038B85F /* GeoSpotApp.swift in Sources */,
+				9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */,
 				9A1D015C2C87B691008E5F1F /* LoginView.swift in Sources */,
 				9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */,
 			);
@@ -443,6 +447,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +478,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
