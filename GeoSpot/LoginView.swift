@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
+    @State private var username = ""
     @State private var password = ""
     @State private var isLoggedIn = false
     @FocusState private var focusedField: Field?
     
     enum Field {
-        case email
+        case username
         case password
     }
     
@@ -30,11 +30,11 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                // Email Field
-                CustomTextField(placeholder: "username", text: $email, isFocused: focusedField == .email)
+                // username Field
+                CustomTextField(placeholder: "username", text: $username, isFocused: focusedField == .username)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 10)
-                    .focused($focusedField, equals: .email)
+                    .focused($focusedField, equals: .username)
                 
                 // Password Field
                 CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
@@ -44,7 +44,7 @@ struct LoginView: View {
                 
                 // Login Button
                 Button(action: {
-                    handleLogin(email: email, password: password)
+                    handleLogin(username: username, password: password)
                 }) {
                     Text("login")
                     .font(.custom("IBM Plex Mono Bold", size: 18))
@@ -86,9 +86,9 @@ struct LoginView: View {
         .navigationBarHidden(true)
     }
     
-    private func handleLogin(email: String, password: String) {
+    private func handleLogin(username: String, password: String) {
         // Handle login action
-        if email == "test@test.com" && password == "test" {
+        if username == "test@test.com" && password == "test" {
             print("Login tapped")
             isLoggedIn = true
         }
