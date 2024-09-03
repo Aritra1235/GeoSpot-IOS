@@ -74,10 +74,23 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .underline()
                 }
+<<<<<<< Updated upstream
+=======
+                .padding(.bottom, 20)
+            }
+            .background(Color.black.edgesIgnoringSafeArea(.all))
+            .navigationDestination(isPresented: $isLoggedIn) {
+                LocationView()
+                    .navigationBarBackButtonHidden(true)
+>>>>>>> Stashed changes
             }
             .padding(.bottom, 20)
         }
+<<<<<<< Updated upstream
         .background(Color.black.edgesIgnoringSafeArea(.all))
+=======
+        .navigationBarHidden(true)
+>>>>>>> Stashed changes
     }
 }
 
@@ -95,6 +108,7 @@ private func handleContactUs() {
             UIApplication.shared.open(url)
         }
     }
+
 
 struct CustomTextField: View {
     var placeholder: String
