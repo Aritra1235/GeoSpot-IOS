@@ -2,16 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Existing entry for URL types -->
-    <key>CFBundleURLTypes</key>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict/>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to show your current coordinates.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to show your current coordinates even when the app is in the background.</string>
+    <key>UIAppFonts</key>
     <array>
-        <dict/>
+        <string>IBMPlexMono-Bold.ttf</string>
     </array>
 
-    <!-- New entries for location permissions -->
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We need your location to show your current coordinates.</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>We need your location to show your current coordinates even when the app is in the background.</string>
 </dict>
 </plist>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1D015C2C87B691008E5F1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D015B2C87B691008E5F1F /* LoginView.swift */; };
+		9A1D015E2C87B986008E5F1F /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1D015D2C87B986008E5F1F /* IBMPlexMono-Bold.ttf */; };
 		9A8CC25B2C848B190038B85F /* GeoSpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC25A2C848B190038B85F /* GeoSpotApp.swift */; };
 		9A8CC25D2C848B190038B85F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC25C2C848B190038B85F /* ContentView.swift */; };
 		9A8CC25F2C848B1F0038B85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CC25E2C848B1F0038B85F /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A1D015B2C87B691008E5F1F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9A1D015D2C87B986008E5F1F /* IBMPlexMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Bold.ttf"; sourceTree = "<group>"; };
 		9A8CC2572C848B190038B85F /* GeoSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8CC25A2C848B190038B85F /* GeoSpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoSpotApp.swift; sourceTree = "<group>"; };
 		9A8CC25C2C848B190038B85F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,12 +101,14 @@
 		9A8CC2592C848B190038B85F /* GeoSpot */ = {
 			isa = PBXGroup;
 			children = (
+				9A1D015D2C87B986008E5F1F /* IBMPlexMono-Bold.ttf */,
 				9AB9AC602C84997100B0522D /* Info.plist */,
 				9A8CC25A2C848B190038B85F /* GeoSpotApp.swift */,
 				9A8CC25C2C848B190038B85F /* ContentView.swift */,
 				9A8CC25E2C848B1F0038B85F /* Assets.xcassets */,
 				9A8CC2602C848B1F0038B85F /* Preview Content */,
 				9AB9AC612C849A2C00B0522D /* LocationManager.swift */,
+				9A1D015B2C87B691008E5F1F /* LoginView.swift */,
 			);
 			path = GeoSpot;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			files = (
 				9A8CC2622C848B1F0038B85F /* Preview Assets.xcassets in Resources */,
 				9A8CC25F2C848B1F0038B85F /* Assets.xcassets in Resources */,
+				9A1D015E2C87B986008E5F1F /* IBMPlexMono-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 			files = (
 				9A8CC25D2C848B190038B85F /* ContentView.swift in Sources */,
 				9A8CC25B2C848B190038B85F /* GeoSpotApp.swift in Sources */,
+				9A1D015C2C87B691008E5F1F /* LoginView.swift in Sources */,
 				9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
