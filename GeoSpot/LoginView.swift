@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isLoggedIn = false
     @FocusState private var focusedField: Field?
     
     enum Field {
@@ -18,34 +19,34 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack {
-            // Logo or App Name
-            Text("GeoSpot")
-                .font(.custom("IBM Plex Mono Bold", size: 34))
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.top, 40)
-            
-            Spacer()
-            
-            // Email Field
-            CustomTextField(placeholder: "username", text: $email, isFocused: focusedField == .email)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 10)
-                .focused($focusedField, equals: .email)
-            
-            // Password Field
-            CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-                .focused($focusedField, equals: .password)
-            
-            // Login Button
-            Button(action: {
-                // Handle login action
-                handleLogin(email : email, password: password)
-            }) {
-                Text("login")
+        NavigationStack {
+            VStack {
+                // Logo or App Name
+                Text("GeoSpot")
+                    .font(.custom("IBM Plex Mono Bold", size: 34))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.top, 40)
+                
+                Spacer()
+                
+                // Email Field
+                CustomTextField(placeholder: "username", text: $email, isFocused: focusedField == .email)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 10)
+                    .focused($focusedField, equals: .email)
+                
+                // Password Field
+                CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+                    .focused($focusedField, equals: .password)
+                
+                // Login Button
+                Button(action: {
+                    handleLogin(email: email, password: password)
+                }) {
+                    Text("login")
                     .font(.custom("IBM Plex Mono Bold", size: 18))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
@@ -55,59 +56,51 @@ struct LoginView: View {
                     .cornerRadius(10)
                     .shadow(radius: 5)
                     .padding(.horizontal, 20)
-            }
-            
-            Spacer()
-            
-            // Sign Up Link
-            HStack {
-                Text("Facing Problems?")
-                    .font(.custom("IBM Plex Mono", size: 16))
-                    .foregroundColor(.white)
-                Button(action: {
-                    // Handle sign up action
-                    handleContactUs()
-                }) {
-                    Text("Contact Us")
-                        .font(.custom("IBM Plex Mono Bold", size: 16))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .underline()
                 }
-<<<<<<< Updated upstream
-=======
+                
+                Spacer()
+                
+                // Sign Up Link
+                HStack {
+                    Text("Facing Problems?")
+                        .font(.custom("IBM Plex Mono", size: 16))
+                        .foregroundColor(.white)
+                    Button(action: {
+                        handleContactUs()
+                    }) {
+                        Text("Contact Us")
+                            .font(.custom("IBM Plex Mono Bold", size: 16))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .underline()
+                    }
+                }
                 .padding(.bottom, 20)
             }
             .background(Color.black.edgesIgnoringSafeArea(.all))
             .navigationDestination(isPresented: $isLoggedIn) {
                 LocationView()
                     .navigationBarBackButtonHidden(true)
->>>>>>> Stashed changes
             }
-            .padding(.bottom, 20)
         }
-<<<<<<< Updated upstream
-        .background(Color.black.edgesIgnoringSafeArea(.all))
-=======
         .navigationBarHidden(true)
->>>>>>> Stashed changes
     }
-}
-
-private func handleLogin(email: String, password: String) {
+    
+    private func handleLogin(email: String, password: String) {
         // Handle login action
         if email == "test@test.com" && password == "test" {
             print("Login tapped")
+            isLoggedIn = true
         }
-       
     }
 
-private func handleContactUs() {
+    private func handleContactUs() {
         // Handle contact us action
         if let url = URL(string: "mailto:support@example.com") {
             UIApplication.shared.open(url)
         }
     }
+}
 
 
 struct CustomTextField: View {
