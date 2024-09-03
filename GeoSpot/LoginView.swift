@@ -80,13 +80,15 @@ struct LoginView: View {
             .background(Color.black.edgesIgnoringSafeArea(.all))
             .navigationDestination(isPresented: $isLoggedIn) {
                 LocationView()
+                    .navigationBarBackButtonHidden(true)
             }
         }
+        .navigationBarHidden(true)
     }
     
     private func handleLogin(email: String, password: String) {
         // Handle login action
-        if email == "Test" && password == "test" {
+        if email == "test@test.com" && password == "test" {
             print("Login tapped")
             isLoggedIn = true
         }
@@ -99,6 +101,7 @@ struct LoginView: View {
         }
     }
 }
+
 
 struct CustomTextField: View {
     var placeholder: String
