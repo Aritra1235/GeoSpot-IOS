@@ -10,12 +10,18 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @FocusState private var focusedField: Field?
+    
+    enum Field {
+        case email
+        case password
+    }
     
     var body: some View {
         VStack {
             // Logo or App Name
             Text("GeoSpot")
-                .font(.custom("IBM Plex Mono Bold", size: 34)) // Use the PostScript name
+                .font(.custom("IBM Plex Mono Bold", size: 34))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 40)
@@ -23,31 +29,24 @@ struct LoginView: View {
             Spacer()
             
             // Email Field
-            TextField("Email", text: $email)
-                .font(.custom("IBM Plex Mono", size: 18)) // Regular font weight
-                .padding()
-                .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
+            CustomTextField(placeholder: "username", text: $email, isFocused: focusedField == .email)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 10)
+                .focused($focusedField, equals: .email)
             
             // Password Field
-            SecureField("Password", text: $password)
-                .font(.custom("IBM Plex Mono", size: 18)) // Regular font weight
-                .padding()
-                .background(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 5)
+            CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
+                .focused($focusedField, equals: .password)
             
             // Login Button
             Button(action: {
                 // Handle login action
+                handleLogin(email : email, password: password)
             }) {
-                Text("Login")
-                    .font(.custom("IBM Plex Mono Bold", size: 18)) // Use the bold font
+                Text("login")
+                    .font(.custom("IBM Plex Mono Bold", size: 18))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -62,21 +61,94 @@ struct LoginView: View {
             
             // Sign Up Link
             HStack {
-                Text("Don't have an account?")
-                    .font(.custom("IBM Plex Mono", size: 16)) // Regular font weight
+                Text("Facing Problems?")
+                    .font(.custom("IBM Plex Mono", size: 16))
                     .foregroundColor(.white)
                 Button(action: {
                     // Handle sign up action
+                    handleContactUs()
                 }) {
-                    Text("Sign Up")
-                        .font(.custom("IBM Plex Mono Bold", size: 16)) // Use the bold font
+                    Text("Contact Us")
+                        .font(.custom("IBM Plex Mono Bold", size: 16))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
+                        .underline()
                 }
             }
             .padding(.bottom, 20)
         }
         .background(Color.black.edgesIgnoringSafeArea(.all))
+    }
+}
+
+private func handleLogin(email: String, password: String) {
+        // Handle login action
+        if email == "test@test.com" && password == "test" {
+            print("Login tapped")
+        }
+       
+    }
+
+private func handleContactUs() {
+        // Handle contact us action
+        if let url = URL(string: "mailto:support@example.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+
+struct CustomTextField: View {
+    var placeholder: String
+    @Binding var text: String
+    var isFocused: Bool
+    
+    var body: some View {
+        TextField("", text: $text)
+            .font(.custom("IBM Plex Mono", size: 18))
+            .foregroundColor(.white)
+            .padding(.vertical, 12)
+            .padding(.horizontal, 10)
+            .background(Color.black)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
+            )
+            .overlay(
+                Text(placeholder)
+                    .font(.custom("IBM Plex Mono", size: 18))
+                    .foregroundColor(Color.gray)
+                    .padding(.leading, 10)
+                    .opacity(text.isEmpty ? 1 : 0),
+                alignment: .leading
+            )
+    }
+}
+
+struct CustomSecureField: View {
+    var placeholder: String
+    @Binding var text: String
+    var isFocused: Bool
+    
+    var body: some View {
+        SecureField("", text: $text)
+            .font(.custom("IBM Plex Mono", size: 18))
+            .foregroundColor(.white)
+            .padding(.vertical, 12)
+            .padding(.horizontal, 10)
+            .background(Color.black)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
+            )
+            .overlay(
+                Text(placeholder)
+                    .font(.custom("IBM Plex Mono", size: 18))
+                    .foregroundColor(Color.gray)
+                    .padding(.leading, 10)
+                    .opacity(text.isEmpty ? 1 : 0),
+                alignment: .leading
+            )
     }
 }
 
