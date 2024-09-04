@@ -32,13 +32,13 @@ struct LoginView: View {
                 
                 // username Field
                 CustomTextField(placeholder: "username", text: $username, isFocused: focusedField == .username)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 30)
                     .padding(.bottom, 10)
                     .focused($focusedField, equals: .username)
                 
                 // Password Field
                 CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 30)
                     .padding(.bottom, 20)
                     .focused($focusedField, equals: .password)
                 
@@ -46,7 +46,7 @@ struct LoginView: View {
                 Button(action: {
                     handleLogin(username: username, password: password)
                 }) {
-                    Text("login")
+                    Text("login")
                     .font(.custom("IBM Plex Mono Bold", size: 18))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
@@ -55,7 +55,7 @@ struct LoginView: View {
                     .foregroundColor(.black)
                     .cornerRadius(10)
                     .shadow(radius: 5)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 30)
                 }
                 
                 Spacer()
@@ -79,7 +79,7 @@ struct LoginView: View {
             }
             .background(Color.black.edgesIgnoringSafeArea(.all))
             .navigationDestination(isPresented: $isLoggedIn) {
-                LocationView()
+                GlowCircleView()
                     .navigationBarBackButtonHidden(true)
             }
         }

@@ -18,6 +18,7 @@
 		9A8CC2782C848B200038B85F /* GeoSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CC2772C848B200038B85F /* GeoSpotUITestsLaunchTests.swift */; };
 		9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9AC612C849A2C00B0522D /* LocationManager.swift */; };
 		9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393B92C87C77900E9B996 /* LocationView.swift */; };
+		9AE393C22C8863D300E9B996 /* GlowCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393C12C8863D300E9B996 /* GlowCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9AB9AC602C84997100B0522D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9AB9AC612C849A2C00B0522D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9AE393B92C87C77900E9B996 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		9AE393C12C8863D300E9B996 /* GlowCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				9AB9AC612C849A2C00B0522D /* LocationManager.swift */,
 				9A1D015B2C87B691008E5F1F /* LoginView.swift */,
 				9AE393B92C87C77900E9B996 /* LocationView.swift */,
+				9AE393C12C8863D300E9B996 /* GlowCircleView.swift */,
 			);
 			path = GeoSpot;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */,
 				9A1D015C2C87B691008E5F1F /* LoginView.swift in Sources */,
 				9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */,
+				9AE393C22C8863D300E9B996 /* GlowCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
