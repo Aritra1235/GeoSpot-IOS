@@ -88,7 +88,7 @@ struct LoginView: View {
     
     private func handleLogin(username: String, password: String) {
         // Handle login action
-        if username == "test@test.com" && password == "test" {
+        if username == "Test" && password == "test" {
             print("Login tapped")
             isLoggedIn = true
         }
