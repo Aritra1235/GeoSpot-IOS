@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct GeoSpotApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    @State private var isLoggedIn = false
+        
+        var body: some Scene {
+            WindowGroup {
+                if isLoggedIn {
+                    MainNavigationView()
+                } else {
+                    LoginView(isLoggedIn: $isLoggedIn)
+            }
         }
     }
 }

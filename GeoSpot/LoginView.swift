@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isLoggedIn: Bool
     @State private var username = ""
     @State private var password = ""
-    @State private var isLoggedIn = false
     @FocusState private var focusedField: Field?
     
     enum Field {
@@ -90,12 +90,11 @@ struct LoginView: View {
     }
     
     private func handleLogin(username: String, password: String) {
-        // Handle login action
-        if username == "Test" && password == "test" {
-            print("Login tapped")
-            isLoggedIn = true
+            // Handle login action
+            if username == "Test" && password == "test" {
+                isLoggedIn = true
+            }
         }
-    }
 
     private func handleContactUs() {
         // Handle contact us action

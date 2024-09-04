@@ -19,6 +19,7 @@
 		9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9AC612C849A2C00B0522D /* LocationManager.swift */; };
 		9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393B92C87C77900E9B996 /* LocationView.swift */; };
 		9AE393C22C8863D300E9B996 /* GlowCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393C12C8863D300E9B996 /* GlowCircleView.swift */; };
+		9AE393C42C8888E700E9B996 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE393C32C8888E700E9B996 /* MainNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9AB9AC612C849A2C00B0522D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9AE393B92C87C77900E9B996 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		9AE393C12C8863D300E9B996 /* GlowCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowCircleView.swift; sourceTree = "<group>"; };
+		9AE393C32C8888E700E9B996 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9A1D015B2C87B691008E5F1F /* LoginView.swift */,
 				9AE393B92C87C77900E9B996 /* LocationView.swift */,
 				9AE393C12C8863D300E9B996 /* GlowCircleView.swift */,
+				9AE393C32C8888E700E9B996 /* MainNavigationView.swift */,
 			);
 			path = GeoSpot;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				9A8CC25D2C848B190038B85F /* ContentView.swift in Sources */,
 				9A8CC25B2C848B190038B85F /* GeoSpotApp.swift in Sources */,
+				9AE393C42C8888E700E9B996 /* MainNavigationView.swift in Sources */,
 				9AE393BA2C87C77900E9B996 /* LocationView.swift in Sources */,
 				9A1D015C2C87B691008E5F1F /* LoginView.swift in Sources */,
 				9AB9AC622C849A2C00B0522D /* LocationManager.swift in Sources */,
