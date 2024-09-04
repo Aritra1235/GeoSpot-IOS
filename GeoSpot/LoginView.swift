@@ -30,14 +30,14 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                // username Field
-                CustomTextField(placeholder: "username", text: $username, isFocused: focusedField == .username)
+                // Username Field
+                CustomTextField(placeholder: "username", text: $username, isFocused: focusedField == .username, icon: "person.fill")
                     .padding(.horizontal, 30)
                     .padding(.bottom, 10)
                     .focused($focusedField, equals: .username)
                 
                 // Password Field
-                CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password)
+                CustomSecureField(placeholder: "password", text: $password, isFocused: focusedField == .password, icon: "key.fill")
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
                     .focused($focusedField, equals: .password)
@@ -46,7 +46,10 @@ struct LoginView: View {
                 Button(action: {
                     handleLogin(username: username, password: password)
                 }) {
-                    Text("login")
+                    HStack {
+                        Text("login")
+                        Image(systemName: "arrow.right.circle")
+                    }
                     .font(.custom("IBM Plex Mono Bold", size: 18))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
@@ -55,8 +58,8 @@ struct LoginView: View {
                     .foregroundColor(.black)
                     .cornerRadius(10)
                     .shadow(radius: 5)
-                    .padding(.horizontal, 30)
                 }
+                .padding(.horizontal, 120)
                 
                 Spacer()
                 
@@ -102,32 +105,38 @@ struct LoginView: View {
     }
 }
 
-
 struct CustomTextField: View {
     var placeholder: String
     @Binding var text: String
     var isFocused: Bool
+    var icon: String
     
     var body: some View {
-        TextField("", text: $text)
-            .font(.custom("IBM Plex Mono", size: 18))
-            .foregroundColor(.white)
-            .padding(.vertical, 12)
-            .padding(.horizontal, 10)
-            .background(Color.black)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
-            )
-            .overlay(
-                Text(placeholder)
-                    .font(.custom("IBM Plex Mono", size: 18))
-                    .foregroundColor(Color.gray)
-                    .padding(.leading, 10)
-                    .opacity(text.isEmpty ? 1 : 0),
-                alignment: .leading
-            )
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(.gray)
+                .frame(width: 20)
+                .padding(.leading, 10)
+            
+            TextField("", text: $text)
+                .font(.custom("IBM Plex Mono", size: 18))
+                .foregroundColor(.white)
+                .padding(.vertical, 12)
+        }
+        .background(Color.black)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
+        )
+        .overlay(
+            Text(placeholder)
+                .font(.custom("IBM Plex Mono", size: 18))
+                .foregroundColor(Color.gray)
+                .padding(.leading, 40)
+                .opacity(text.isEmpty ? 1 : 0),
+            alignment: .leading
+        )
     }
 }
 
@@ -135,27 +144,34 @@ struct CustomSecureField: View {
     var placeholder: String
     @Binding var text: String
     var isFocused: Bool
+    var icon: String
     
     var body: some View {
-        SecureField("", text: $text)
-            .font(.custom("IBM Plex Mono", size: 18))
-            .foregroundColor(.white)
-            .padding(.vertical, 12)
-            .padding(.horizontal, 10)
-            .background(Color.black)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
-            )
-            .overlay(
-                Text(placeholder)
-                    .font(.custom("IBM Plex Mono", size: 18))
-                    .foregroundColor(Color.gray)
-                    .padding(.leading, 10)
-                    .opacity(text.isEmpty ? 1 : 0),
-                alignment: .leading
-            )
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(.gray)
+                .frame(width: 20)
+                .padding(.leading, 10)
+            
+            SecureField("", text: $text)
+                .font(.custom("IBM Plex Mono", size: 18))
+                .foregroundColor(.white)
+                .padding(.vertical, 12)
+        }
+        .background(Color.black)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(isFocused ? Color.white : Color.gray, lineWidth: 2)
+        )
+        .overlay(
+            Text(placeholder)
+                .font(.custom("IBM Plex Mono", size: 18))
+                .foregroundColor(Color.gray)
+                .padding(.leading, 40)
+                .opacity(text.isEmpty ? 1 : 0),
+            alignment: .leading
+        )
     }
 }
 
